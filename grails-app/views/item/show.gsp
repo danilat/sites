@@ -59,11 +59,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${itemInstance?.photo}">
+				<g:if test="${itemInstance?.photos}">
 				<li class="fieldcontain">
-					<span id="photo-label" class="property-label"><g:message code="item.photo.label" default="Photo" /></span>
+					<span id="photo-label" class="property-label"><g:message code="item.photo.label" default="Photos" /></span>
 					
-						<g:each in="${itemInstance.photo}" var="p">
+						<g:each in="${itemInstance.photos}" var="p">
 						<span class="property-value" aria-labelledby="photo-label"><g:link controller="photo" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					

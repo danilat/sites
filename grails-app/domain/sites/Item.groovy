@@ -10,7 +10,7 @@ class Item {
     Double lat
     Double lng
     
-    static hasMany = [photo: Photo]
+    static hasMany = [photos: Photo]
     static constraints = {
         name()
         description()

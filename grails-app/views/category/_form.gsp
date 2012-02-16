@@ -9,11 +9,3 @@
 	</label>
 	<g:textField name="name" required="" value="${categoryInstance?.name}"/>
 </div>
-
-<div class="fieldcontain ${hasErrors(bean: categoryInstance, field: 'items', 'error')} ">
-	<label for="items">
-		<g:message code="category.items.label" default="Items" />
-		
-	</label>
-</div>
-

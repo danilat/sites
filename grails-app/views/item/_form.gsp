@@ -15,7 +15,7 @@
 		<g:message code="item.description.label" default="Description" />
 		
 	</label>
-	<g:textField name="description" value="${itemInstance?.description}"/>
+	<g:textArea name="description" value="${itemInstance?.description}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'place', 'error')} ">
@@ -34,11 +34,11 @@
 	<g:select id="category" name="category.id" from="${sites.Category.list()}" optionKey="id" required="" value="${itemInstance?.category?.id}" class="many-to-one"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'photo', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: itemInstance, field: 'photos', 'error')} ">
 	<label for="photo">
-		<g:message code="item.photo.label" default="Photo" />
+		<g:message code="item.photo.label" default="Photos" />
 		
 	</label>
-	<g:select name="photo" from="${sites.Photo.list()}" multiple="multiple" optionKey="id" size="5" value="${itemInstance?.photo*.id}" class="many-to-many"/>
+	<g:select name="photos" from="${sites.Photo.list()}" multiple="multiple" optionKey="id" size="5" value="${itemInstance?.photos*.id}" class="many-to-many"/>
 </div>
 

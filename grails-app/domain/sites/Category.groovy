@@ -1,12 +1,12 @@
 package sites
 
 class Category {
-	String name
-	
-	static hasMany = [items: Item]
+    String name
+    
+    static hasMany = [items: Item]
 
     static constraints = {
-		name nullable:false, blank:false
+        name nullable:false, blank:false
     }
     
     String toString(){

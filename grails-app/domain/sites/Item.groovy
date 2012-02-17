@@ -1,7 +1,7 @@
 package sites
 
 class Item {
-    transient def geocodingService
+    //transient def geocodingService
     static belongsTo = [category: Category]
     String name
     String description
@@ -23,10 +23,18 @@ class Item {
         description type: 'text'
     }
     
+    /*def beforeInsert() {
+        localize()
+    }
+    
+    def beforeUpdate(){
+        localize()
+    }
+    
     def localize(){
         def latLng = geocodingService.findLatLngByAddress(place)
         lat = latLng.lat
         lng = latLng.lng
         this
-    }
+    }*/
 }

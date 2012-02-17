@@ -6,8 +6,6 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
-grails.plugin.location.localizable = '../localizable'
-
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -43,7 +41,6 @@ grails.project.dependency.resolution = {
         runtime ":jquery:1.7.1"
         runtime ":resources:1.1.5"
         compile ":burning-image:0.5.0"
-        //compile ":localizable:0.2"
 
         build ":tomcat:$grailsVersion"
     }
